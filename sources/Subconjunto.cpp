@@ -8,41 +8,40 @@ using namespace std;
 
 class Subconjunto{
     public:
-    bool exito; 
-    bool done;
     vector<int> solucion;
 
-    void suma(int pos, int sum, int n, int conjunto[], int cant){
-        done = true;
+    bool suma(int pos, int sum, int n, int conjunto[], int cant){
         if(sum>cant){
-            exito = false;
-            done = false;
+            return false;
         }
         if(sum == cant){
-            exito = true;
             imprimir();
-            done = false;
+            return false;
         }
         for(int i=pos; i<n; ++i){
             solucion.push_back(conjunto[i]);
-            if(sum<cant){
-                suma(i+1, sum+conjunto[i], n, conjunto, cant);
-                done = true;
+            if(suma(i+1, sum+conjunto[i], n, conjunto, cant)){
+                return true;
             }
-            if(exito == false){
-                solucion.pop_back();
-            }
+            solucion.pop_back();
         }
-        done = false;
+        return false;
     }
 
     void imprimir(){
-        cout<<"[";
+        vector<int> temp;
+
+        cout<<"[ ";
         while(!solucion.empty()){
             cout<<solucion.back()<<" ";
+            temp.push_back(solucion.back());
             solucion.pop_back();
         }
         cout<<"]"<<endl;
+        while(!temp.empty()){
+            solucion.push_back(temp.back());
+            temp.pop_back();
+        }
     }
 };
 
