@@ -12,10 +12,16 @@
 
 using namespace std;
 
+/* Subconjunto: this class defines the methods to find the subset
+*/
 class Subconjunto{
     public:
     vector<int> solucion;
 
+    /* suma: this method finds the numbers that will be part of the solution
+    * @param position, sum of numbers, size of array, array and the sum we are looking for
+    * @return true when solutions are found
+    */
     bool suma(int pos, int sum, int n, int conjunto[], int cant){
         if(sum>cant){
             return false;
@@ -34,6 +40,9 @@ class Subconjunto{
         return false;
     }
 
+    /* imprimit: this method prints out a vector when a solution is found
+    * @return void
+    */
     void imprimir(){
         vector<int> temp;
 
