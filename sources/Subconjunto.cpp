@@ -1,3 +1,9 @@
+/*
+    Subconjunto.cpp
+    Encuentra el subconjunto que al sumarse, nos da como resultado un número deseado
+    Constaza Gómez Sánchez
+    12 de abril de 2020
+*/
 #include <iostream>
 #include <array>
 #include <vector>
