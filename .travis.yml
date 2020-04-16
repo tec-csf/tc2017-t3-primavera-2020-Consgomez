@@ -4,3 +4,5 @@ script:
   - cd sources
   - g++ Subconjunto.cpp -std=c++17 -o check
   - ./check
+  - g++ MultiEnteros.cpp -std=c++17 -o segundo
+  - ./segundo
