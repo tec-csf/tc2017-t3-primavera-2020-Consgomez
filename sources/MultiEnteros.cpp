@@ -1,14 +1,24 @@
+/*
+    MultiEnteros.cpp
+    Multiplica dos números enteros grandes, con la técnica de divide y vencerás
+    Constanza Gómez Sánchez
+    14 de abril de 2020
+*/
 #include <iostream>
 #include <string.h>
 #include <math.h>
 
 using namespace std;
 
-
+/*MultiEnteros: this class defines the methods to find the solution*/
 class MultiEnteros{
     public:
     string strA, strB, mayor;
 
+    /*multiplicacion: this method finds the product of the numbers we give the code in the main
+    * @param integer a, integer b and int n which is the length of the numbers
+    * @return the product
+    */
     long multiplicacion(int a, int b, int n){
         if((a<100)&&(b<100)){
             return a*b;
@@ -33,6 +43,10 @@ class MultiEnteros{
         return 0;
     }
 
+    /*tam: this method finds the length of the number
+    * @param integer a and integer b
+    * @return size of the biggest number
+    */
     int tam(int a, int b){
         int size = 0;
         strA = to_string(a);
@@ -43,6 +57,10 @@ class MultiEnteros{
         return size;
     }
 
+    /*resize: this method adds 0 to the left of the number if it's not a multiple of 2
+    * @param string mayor
+    * @return the arranged string
+    */
     string resize(string mayor){
         string temp = "0";
         while(mayor.size()%2!=0){
@@ -51,6 +69,10 @@ class MultiEnteros{
         return mayor;
     }
 
+    /*encontrar: this method compares both numbers given to find the biggest one
+    * @param string strA and string strB
+    * @return the biggest string
+    */
     string encontrar(string strA, string strB){
         if((strA.size()>strB.size()) || (strA.size()==strB.size())){
             return strA;

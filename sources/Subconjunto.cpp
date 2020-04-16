@@ -40,7 +40,7 @@ class Subconjunto{
         return false;
     }
 
-    /* imprimit: this method prints out a vector when a solution is found
+    /* imprimir: this method prints out a vector when a solution is found
     * @return void
     */
     void imprimir(){
