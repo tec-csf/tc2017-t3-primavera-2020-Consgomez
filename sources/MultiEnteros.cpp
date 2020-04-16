@@ -62,8 +62,8 @@ class MultiEnteros{
 };
 
 int main(){
-    int a = 9999;
-    int b = 9999;
+    int a = 1234;
+    int b = 981;
     int resultado;
     MultiEnteros m;
     resultado = m.multiplicacion(a, b);
