@@ -36,7 +36,14 @@ El proyecto debe seguir la siguiente estructura de carpetas:
 
 ## 2. Solución
 
-*[Incluya aquí una explicación de la solución implementada]*
+## Subconjuntos
+
+El primer problema a solucionar es encontrar el subconjunto, de un conjunto de enteros positivos, cuya suma sea exactamente el valor de un entero positivo. Esta solución se puede encontrar en mi archivo Subconjunto.cpp, aquí podemos observar que use la técnica de vuelta atrás para resolver el problema. El código ya tiene el conjunto y la cantidad deseada, lo que hace el código es ir recorriendo de uno en uno el conjunto, añadiendo a un vector las posibles soluciones y borrando las que no nos llevan al resultado deseado. Esto se logra por medio de recursividad que nos permite reccorrer el conjunto, las veces necesarias para poder encontrar todos los subconjuntos posibles.
+
+## Multiplicación de enteros grandes
+
+El segundo problema a solucionar es hacer la multiplicación de enteros grandes usando la técnica de divide y vencerás, para llegar al resultado deseado. Esta solución se puede encontrar en el archivo MultiEnteros.cpp, donde podremos observar el código implementado.
+En el código debemos de poner los números que deseamos multiplicar. Estos números se arreglan para que puedan llegar a tener *n* bits, lo cual nos permite implementar el código. Los números que insertamos se dividen en *n/s* para poder reducirlo a números más pequeños, esto se hace hasta que los números sean menores a 100 y se puedan multiplicar facilmente para después juntarlos y obtener el resultado final.
 
 ### 2.1 Pasos a seguir para utilizar la aplicación
 
