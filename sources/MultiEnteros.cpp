@@ -21,7 +21,7 @@ class MultiEnteros{
         strA = resize(strA);
         strB = resize(strB);
         n = strA.size();
-        if(pequeño(strA, strB) == true){
+        if((strA.size()<=2)&&(strB.size()<=2)){
             return a*b;
         } else{
             s = n/2;
@@ -52,12 +52,6 @@ class MultiEnteros{
         return mayor;
     }
 
-    bool pequeño(string a, string b){
-        if((a.size()<=2)&&(b.size()<=2)){
-            return true;
-        }
-        return false;
-    }
 };
 
 int main(){
