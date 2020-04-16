@@ -55,8 +55,7 @@ class MultiEnteros{
     bool pequeño(string a, string b){
         if((a.size()<=2)&&(b.size()<=2)){
             return true;
-        }else
-            return false;
+        }
         return false;
     }
 };
