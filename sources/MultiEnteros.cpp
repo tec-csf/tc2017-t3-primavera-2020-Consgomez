@@ -35,7 +35,7 @@ class MultiEnteros{
         return 0;
     }
 
-    int tamaño(int a, int b){
+    int tam(int a, int b){
         int size = 0;
         strA = to_string(a);
         strB = to_string(b);
@@ -71,7 +71,7 @@ int main(){
     int b = 104321;
     int resultado, n;
     MultiEnteros m;
-    n = m.tamaño(a,b);
+    n = m.tam(a,b);
     resultado = m.multiplicacion(a, b, n);
     cout<<resultado<<endl;
 
