@@ -12,10 +12,6 @@ class MultiEnteros{
     string strA, strB, mayor;
 
     int multiplicacion(int a, int b, int n){
-        if((n!=2)||(n%4!=0)||(n!=4)){
-            n+=2;
-        }
-        //cout<<n<<endl;
         if((a<100)&&(b<100)){
             return a*b;
         } else{
@@ -40,11 +36,15 @@ class MultiEnteros{
     }
 
     int tamaño(int a, int b){
+        int size = 0;
         strA = to_string(a);
         strB = to_string(b);
         mayor = encontrar(strA, strB);
         mayor = resize(mayor);
-        return mayor.size();
+        if((mayor.size()!=2)||(mayor.size()%4!=0)){
+            size = mayor.size()+2;
+        }
+        return size;
     }
 
     string resize(string mayor){
@@ -67,11 +67,11 @@ class MultiEnteros{
 };
 
 int main(){
-    int a = 59699;
-    int b = 1968;
-    int resultado;
+    int a = 20585;
+    int b = 104321;
+    int resultado, n;
     MultiEnteros m;
-    int n = m.tamaño(a,b);
+    n = m.tamaño(a,b);
     resultado = m.multiplicacion(a, b, n);
     cout<<resultado<<endl;
 
