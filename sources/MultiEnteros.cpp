@@ -7,28 +7,26 @@ using namespace std;
 
 class MultiEnteros{
     public:
-    int pot;
-    int resultado;
     string strA, strB, mayor;
 
-    int multiplicacion(int a, int b, int n){
+    long multiplicacion(int a, int b, int n){
         if((a<100)&&(b<100)){
             return a*b;
         } else{
-            int s = n/2;
-            pot = pow(10, s);
-            int a1 = a/pot;
-            int a2 = a%pot;
-            int b1 = b/pot;
-            int b2 = b%pot;
-            int w = multiplicacion(a1, b1, s);
-            int x = multiplicacion(a1, b2, s);
-            int y = multiplicacion(a2, b1, s);
-            int z = multiplicacion(a2, b2, s);
-            int aux = x+y;
+            long s = n/2;
+            long pot = pow(10, s);
+            long a1 = a/pot;
+            long a2 = a%pot;
+            long b1 = b/pot;
+            long b2 = b%pot;
+            long w = multiplicacion(a1, b1, s);
+            long x = multiplicacion(a1, b2, s);
+            long y = multiplicacion(a2, b1, s);
+            long z = multiplicacion(a2, b2, s);
+            long aux = x+y;
             w = w * pow(10, 2*s);
             aux = aux * pow(10, s);
-            int resultado = w + aux;
+            long resultado = w + aux;
             resultado = resultado + z;
             return resultado;
         }
@@ -41,9 +39,7 @@ class MultiEnteros{
         strB = to_string(b);
         mayor = encontrar(strA, strB);
         mayor = resize(mayor);
-        if((mayor.size()!=2)||(mayor.size()%4!=0)){
-            size = mayor.size()+2;
-        }
+        size = pow(2, mayor.size()/2);
         return size;
     }
 
@@ -56,7 +52,7 @@ class MultiEnteros{
     }
 
     string encontrar(string strA, string strB){
-        if(strA.size()>strB.size()){
+        if((strA.size()>strB.size()) || (strA.size()==strB.size())){
             return strA;
         } else if(strB.size()>strA.size()){
             return strB;
@@ -67,9 +63,10 @@ class MultiEnteros{
 };
 
 int main(){
-    int a = 20585;
-    int b = 104321;
-    int resultado, n;
+    int a = 5200585;
+    int b = 154321;
+    long resultado;
+    int n;
     MultiEnteros m;
     n = m.tam(a,b);
     resultado = m.multiplicacion(a, b, n);
