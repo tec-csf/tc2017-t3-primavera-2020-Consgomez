@@ -7,41 +7,44 @@ using namespace std;
 
 class MultiEnteros{
     public:
-    int n, s;
-    int a1, a2, b1, b2;
     int pot;
-    int w, x, y, z;
-    int aux;
     int resultado;
-    string strA, strB;
+    string strA, strB, mayor;
 
-    int multiplicacion(int a, int b){
-        strA = to_string(a);
-        strB = to_string(b);
-        strA = resize(strA);
-        strB = resize(strB);
-        n = strA.size();
-        if((strA.size()<=2)&&(strB.size()<=2)){
+    int multiplicacion(int a, int b, int n){
+        if((n!=2)||(n%4!=0)||(n!=4)){
+            n+=2;
+        }
+        //cout<<n<<endl;
+        if((a<100)&&(b<100)){
             return a*b;
         } else{
-            s = n/2;
+            int s = n/2;
             pot = pow(10, s);
-            a1 = a/pot;
-            a2 = a%pot;
-            b1 = b/pot;
-            b2 = b%pot;
-            w = multiplicacion(a1, b1);
-            x = multiplicacion(a1, b2);
-            y = multiplicacion(a2, b1);
-            z = multiplicacion(a2, b2);
-            aux = x+y;
+            int a1 = a/pot;
+            int a2 = a%pot;
+            int b1 = b/pot;
+            int b2 = b%pot;
+            int w = multiplicacion(a1, b1, s);
+            int x = multiplicacion(a1, b2, s);
+            int y = multiplicacion(a2, b1, s);
+            int z = multiplicacion(a2, b2, s);
+            int aux = x+y;
             w = w * pow(10, 2*s);
             aux = aux * pow(10, s);
-            resultado = w + aux;
+            int resultado = w + aux;
             resultado = resultado + z;
             return resultado;
         }
         return 0;
+    }
+
+    int tamaño(int a, int b){
+        strA = to_string(a);
+        strB = to_string(b);
+        mayor = encontrar(strA, strB);
+        mayor = resize(mayor);
+        return mayor.size();
     }
 
     string resize(string mayor){
@@ -52,14 +55,24 @@ class MultiEnteros{
         return mayor;
     }
 
+    string encontrar(string strA, string strB){
+        if(strA.size()>strB.size()){
+            return strA;
+        } else if(strB.size()>strA.size()){
+            return strB;
+        }
+        return ".";
+    }
+
 };
 
 int main(){
-    int a = 1234;
-    int b = 981;
+    int a = 59699;
+    int b = 1968;
     int resultado;
     MultiEnteros m;
-    resultado = m.multiplicacion(a, b);
+    int n = m.tamaño(a,b);
+    resultado = m.multiplicacion(a, b, n);
     cout<<resultado<<endl;
 
     return 0;
