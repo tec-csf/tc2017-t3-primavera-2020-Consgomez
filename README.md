@@ -41,10 +41,11 @@ El proyecto debe seguir la siguiente estructura de carpetas:
 Se desea encontrar una solución, por medio de un algoritmo que use la técnica de vuelta atrás, que encuentre todos los posibles subconjuntos de *W* cuya suma sea exactamente *M*. 
 
 La solución a este problema la podemos ver en el archivo *Subconjunto.cpp*. 
-En el *main* del archivo se introduce un arreglo de *n* números y la suma a la que deseamos llegar. Una vez que tenemos esto, en la clase de *Subconjunto*, mandamos llamar la función *suma*, en la cual usamos la recursividad para llegar a la solución
-La función *suma()* es tipo *bool*, lo que nos va a permitir finalizar la recursividad, una vez que ya encontremos uno de los subconjuntos deseados. En la función se va a empesar a recorrer el arreglo, empezando en la posición 0. Los valores se van a guardar en el vector solución, se va a entrar en la recursividad y si vemos que el valor recién insertado al vector nos puede llevar a la solución se queda y nos movemos una posición en el arreglo; si no nos va a llevar a la solución, se quita ese valor del vector y seguimos con la siguiente posición del arreglo. Esto se repite las veces necesarias hasta que encontremos todos los subconjuntos posibles.
+En el *main()* del archivo se introduce un arreglo de *n* números y la suma a la que deseamos llegar. Una vez que tenemos esto, en la clase de *Subconjunto*, mandamos llamar la función *suma()*, en la cual usamos la recursividad para llegar a la solución
+La función *suma()* es tipo *bool*, lo que nos va a permitir finalizar la recursividad, una vez que ya encontremos uno de los subconjuntos posibles. En la función se va a empesar a recorrer el arreglo empezando en la posición 0. Los valores se van a guardar en el vector solución, y vamos a volver a llamar la función, lo que nos va a permitir avanzar posiciones en el arreglo y ver si los valores que vamos insertando al vector nos puede llevar a la solución. Si se comprueba que el subconjunto dentro de la solución nos puede llevar a una solución, se queda y seguimos avanzando en el arreglo; pero si vemos que no nos va a llevar a la solución, se quita ese valor del vector y seguimos con la siguiente posición del arreglo. Esto se repite las veces necesarias hasta que encontremos todos los subconjuntos posibles.
 
-La complejidad de este algoritmo es de 
+Los algoritmos de vuelta atrás tienen una complejidad exponencial por la manera en la que se busca una solución por medio del recorrido a profundidad de un árbol. Su complejidad depende del número de nodos que contenga el árbol.
+Es por esto que para este algoritmo, su complejidad va a ser de *#O(m^n)#*, donde en *m* son las posibilidades que existen en cada nivel y *n* es el número de veces que se va a hacer recursividad en el algoritmos para poder encontrar las soluciones.
 
 
 ##### Multiplicación de enteros grandes
@@ -52,8 +53,8 @@ La complejidad de este algoritmo es de
 Se desea encontrar una solución, por medio de un algoritmo que use la técnica de divide y vencerás, que multiplique dos números enteros grandes. 
 
 La solución a este problema la podemos ver en el archivo *MultiEnteros.cpp*. 
-En el *main* de este archivo se escriben los dos valores que deseamos multiplicar, hay que recordar que estos deben de ser enteros. Una vez que tenemos esto, de la clase *MultiEnteros*, mandamos llamar la función *tam()*, la cual obtiene la longitud de los números y obtiene la longitud en bits que vamos a estar usando en el programa. Ya que tenmos esto, llamamos la función *multiplicacion()* en donde se resuelve el problema.
-Lo que hace la función *multiplicacion()* es, con ayuda de la recursividad, dividir los números enteros en 2, y así sucesivamente hasta que obtengamos números menores de 100 que nos sean más fáciles de multiplicar. Una vez que llegamos a dividir los números lo más posible, empezamos a juntarlos para, de esta manera, llegar al resultado de la multiplicación. 
+En el *main()* de este archivo se escriben los dos valores que deseamos multiplicar, hay que recordar que estos deben de ser enteros. Una vez que tenemos esto, de la clase *MultiEnteros*, mandamos llamar la función *tam()*, la cual obtiene la longitud de los números y con esto obtiene su potencia de 2, para con esto poder ir dividiendo cada uno de los números.
+Ya que tenemos esto, llamamos la función *multiplicacion()* en donde se resuelve el problema. Lo que hace esta función es, con ayuda de la recursividad, dividir los números enteros en *n* dígitos, la *n* la obtuvimos en la función *tam()*, y esto se hace sucesivamente hasta que obtengamos números menores de 100 que nos sean más fáciles de multiplicar. Una vez que llegamos a dividir los números lo más posible, empezamos a juntarlos para, de esta manera, llegar al resultado de la multiplicación. 
 
 La complejidad de este algoritmo es *#O(n^2)#*, siendo esta la más eficiente.
 
