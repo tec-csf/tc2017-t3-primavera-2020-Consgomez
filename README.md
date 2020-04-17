@@ -63,4 +63,7 @@ En el código debemos de poner los números que deseamos multiplicar. Estos núm
 
 ## 3. Referencias
 
-*[Incluya aquí las referencias a sitios de interés y cualquier otra información que haya utilizado para realizar la actividad y que le puedan ser de utilidad a otras personas que quieran usarlo como referencia]*
+http://www.lcc.uma.es/~av/Libro/CAP3.pdf
+http://www.lcc.uma.es/~av/Libro/CAP6.pdf
+https://elvex.ugr.es/decsai/algorithms/slides/3%20DV.pdf
+https://webdiis.unizar.es/asignaturas/EDA/ea/slides/3-Divide%20y%20venceras.pdf
