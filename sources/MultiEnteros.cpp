@@ -85,14 +85,16 @@ class MultiEnteros{
 };
 
 int main(){
-    int a = 5200585;
-    int b = 154321;
+    int a = 25234;
+    int b = 105981;
     long resultado;
     int n;
     MultiEnteros m;
     n = m.tam(a,b);
     resultado = m.multiplicacion(a, b, n);
-    cout<<resultado<<endl;
+    cout<<endl;
+    cout<<"El resultado de "<<a<<" x "<<b<<" es "<<resultado<<endl;
+    cout<<endl;
 
     return 0;
 }

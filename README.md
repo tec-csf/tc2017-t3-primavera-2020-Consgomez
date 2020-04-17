@@ -53,7 +53,7 @@ Es por esto que para este algoritmo, su complejidad va a ser de *#O(m^n)#*, dond
 Se desea encontrar una solución, por medio de un algoritmo que use la técnica de divide y vencerás, que multiplique dos números enteros grandes. 
 
 La solución a este problema la podemos ver en el archivo *MultiEnteros.cpp*. 
-En el *main()* de este archivo se escriben los dos valores que deseamos multiplicar, hay que recordar que estos deben de ser enteros. Una vez que tenemos esto, de la clase *MultiEnteros*, mandamos llamar la función *tam()*, la cual obtiene la longitud de los números y con esto obtiene su potencia de 2, para con esto poder ir dividiendo cada uno de los números.
+En el *main()* de este archivo se escriben los dos valores que deseamos multiplicar, hay que recordar que estos deben de ser enteros positivos. Una vez que tenemos esto, de la clase *MultiEnteros*, mandamos llamar la función *tam()*, la cual obtiene la longitud de los números y con esto obtiene su potencia de 2, para con esto poder ir dividiendo cada uno de los números.
 Ya que tenemos esto, llamamos la función *multiplicacion()* en donde se resuelve el problema. Lo que hace esta función es, con ayuda de la recursividad, dividir los números enteros en *n* dígitos, la *n* la obtuvimos en la función *tam()*, y esto se hace sucesivamente hasta que obtengamos números menores de 100 que nos sean más fáciles de multiplicar. Una vez que llegamos a dividir los números lo más posible, empezamos a juntarlos para, de esta manera, llegar al resultado de la multiplicación. 
 
 La complejidad de este algoritmo es *#O(n^2)#*, siendo esta la más eficiente.
