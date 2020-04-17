@@ -38,32 +38,66 @@ El proyecto debe seguir la siguiente estructura de carpetas:
 
 ##### Subconjuntos
 
-El primer problema a solucionar es encontrar el subconjunto, de un conjunto de enteros positivos, cuya suma sea exactamente el valor de un entero positivo. Esta solución se puede encontrar en mi archivo Subconjunto.cpp, aquí podemos observar que use la técnica de vuelta atrás para resolver el problema. El código ya tiene el conjunto y la cantidad deseada, lo que hace el código es ir recorriendo de uno en uno el conjunto, añadiendo a un vector las posibles soluciones y borrando las que no nos llevan al resultado deseado. Esto se logra por medio de recursividad que nos permite reccorrer el conjunto, las veces necesarias para poder encontrar todos los subconjuntos posibles.
+Se desea encontrar una solución, por medio de un algoritmo que use la técnica de vuelta atrás, que encuentre todos los posibles subconjuntos de *W* cuya suma sea exactamente *M*. 
+
+La solución a este problema la podemos ver en el archivo *Subconjunto.cpp*. 
+En el *main* del archivo se introduce un arreglo de *n* números y la suma a la que deseamos llegar. Una vez que tenemos esto, en la clase de *Subconjunto*, mandamos llamar la función *suma*, en la cual usamos la recursividad para llegar a la solución
+La función *suma()* es tipo *bool*, lo que nos va a permitir finalizar la recursividad, una vez que ya encontremos uno de los subconjuntos deseados. En la función se va a empesar a recorrer el arreglo, empezando en la posición 0. Los valores se van a guardar en el vector solución, se va a entrar en la recursividad y si vemos que el valor recién insertado al vector nos puede llevar a la solución se queda y nos movemos una posición en el arreglo; si no nos va a llevar a la solución, se quita ese valor del vector y seguimos con la siguiente posición del arreglo. Esto se repite las veces necesarias hasta que encontremos todos los subconjuntos posibles.
+
+La complejidad de este algoritmo es de 
+
 
 ##### Multiplicación de enteros grandes
 
-El segundo problema a solucionar es hacer la multiplicación de enteros grandes usando la técnica de divide y vencerás, para llegar al resultado deseado. Esta solución se puede encontrar en el archivo MultiEnteros.cpp, donde podremos observar el código implementado.
-En el código debemos de poner los números que deseamos multiplicar. Estos números se arreglan para que puedan llegar a tener *n* bits, lo cual nos permite implementar el código. Los números que insertamos se dividen en *n/s* para poder reducirlo a números más pequeños, esto se hace hasta que los números sean menores a 100 y se puedan multiplicar facilmente para después juntarlos y obtener el resultado final.
+Se desea encontrar una solución, por medio de un algoritmo que use la técnica de divide y vencerás, que multiplique dos números enteros grandes. 
+
+La solución a este problema la podemos ver en el archivo *MultiEnteros.cpp*. 
+En el *main* de este archivo se escriben los dos valores que deseamos multiplicar, hay que recordar que estos deben de ser enteros. Una vez que tenemos esto, de la clase *MultiEnteros*, mandamos llamar la función *tam()*, la cual obtiene la longitud de los números y obtiene la longitud en bits que vamos a estar usando en el programa. Ya que tenmos esto, llamamos la función *multiplicacion()* en donde se resuelve el problema.
+Lo que hace la función *multiplicacion()* es, con ayuda de la recursividad, dividir los números enteros en 2, y así sucesivamente hasta que obtengamos números menores de 100 que nos sean más fáciles de multiplicar. Una vez que llegamos a dividir los números lo más posible, empezamos a juntarlos para, de esta manera, llegar al resultado de la multiplicación. 
+
+La complejidad de este algoritmo es *#O(n^2)#*, siendo esta la más eficiente.
 
 ### 2.1 Pasos a seguir para utilizar la aplicación
 
+Todos estos pasos se hacen por medio de la terminal. 
+
+Antes de empezar, debemos de clonar el repositorio de GitHub a un directorio local. Para poder hacer esto, debemos de estar dentro de nuestro directorio local al cual deseamos clonar nuestro repositorio y debemos de escribir el siguiente comando en la terminal:
+```
+        https://github.com/tec-csf/tc2017-t3-primavera-2020-Consgomez.git
+```
+
+Una vez que ya hayamos clonado el repositoria, el usuario debe de acceder a el, igual que entrar a la carpeta *sources* para poder compilar los códigos. 
+
 ##### Subconjuntos
 
-* Si se desea, se puede modificar las variables *int conjunto[]* e *int cant* para encontrar el subconjunto para el número deseado
-* Usar la terminal para acceder a la carpeta [sources](https://github.com/tec-csf/tc2017-t3-primavera-2020-Consgomez/tree/master/sources).
-* Correr en la terminal el código con el comando: g++ Subconjunto.cpp -std=c++17 -o check
-* Correr el comando: ./check
+Para compilar este código debemos de hacer lo siguiente:
+* Primero debemos de asegurarnos de que nuestras variables *int conjunto[]* e *int cant*, que se encuentran dentro del *main()* , contengan los valores deseados. 
+* Ya que hayamos hecho esto, debemos de correr el siguiente comando en la terminal:
+```
+        g++ Subconjunto.cpp -std=c++17 -o check
+```
+* Por último, corremos el siguiente comando en la terminal:
+```
+        ./check
+```
 
 ##### Multiplicación de enteros grandes
 
-* Si se desea, se puede modificar las variables *int a* e *int b* para multiplicar los número deseados
-* Usar la terminal para acceder a la carpeta [sources](https://github.com/tec-csf/tc2017-t3-primavera-2020-Consgomez/tree/master/sources).
-* Correr en la terminal el código con el comando: g++ MultiEnteros.cpp -std=c++17 -o segundo
-* Correr el comando: ./segundo
+Para compilar este código debemos de hacer lo siguiente:
+* Primero debemos de asegurarnos de que nuestras variables *int a* e *int b*, que se encuentran dentro del *main()* , contengan números que deseamos multiplicar.
+* Ya que hayamos hecho esto, debemos de correr el siguiente comando en la terminal:
+```
+        g++ MultiEnteros.cpp -std=c++17 -o segundo
+```
+* Por último, corremos el siguiente comando en la terminal:
+```
+        ./segundo
+```
 
 ## 3. Referencias
 
-http://www.lcc.uma.es/~av/Libro/CAP3.pdf
-http://www.lcc.uma.es/~av/Libro/CAP6.pdf
-https://elvex.ugr.es/decsai/algorithms/slides/3%20DV.pdf
-https://webdiis.unizar.es/asignaturas/EDA/ea/slides/3-Divide%20y%20venceras.pdf
+1. Rosa Guerequeta y Antonio Vallecillo. (1998). Divide y vencerás. En Técnicas de Diseño de Algoritmos(105 - 113). Málaga: Servicio de Publicaciones de la Universidad de Málaga.
+2. Rosa Guerequeta y Antonio Vallecillo. (1998). Vuelta atrás. En Técnicas de Diseño de Algoritmos(211, 212). Málaga: Servicio de Publicaciones de la Universidad de Málaga.
+3. Departamento de Ciencias de la Computación e I.A. (s.f). *Algoritmos "Divide y Vencerás"*. [Diapositiva de PowerPoint]. Recuperado 14 de abril de 2020, de: [](https://elvex.ugr.es/decsai/algorithms/slides/3%20DV.pdf).
+4. Campos, J. (s.f). *Esquemas Algorítmicos - Divide y Vencerás"*. Recuperado de: [](https://webdiis.unizar.es/asignaturas/EDA/ea/slides/3-Divide%20y%20venceras.pdf)
+
