@@ -98,6 +98,6 @@ Para compilar este código debemos de hacer lo siguiente:
 
 1. Rosa Guerequeta y Antonio Vallecillo. (1998). Divide y vencerás. En Técnicas de Diseño de Algoritmos(105 - 113). Málaga: Servicio de Publicaciones de la Universidad de Málaga.
 2. Rosa Guerequeta y Antonio Vallecillo. (1998). Vuelta atrás. En Técnicas de Diseño de Algoritmos(211, 212). Málaga: Servicio de Publicaciones de la Universidad de Málaga.
-3. Departamento de Ciencias de la Computación e I.A. (s.f). *Algoritmos "Divide y Vencerás"*. [Diapositiva de PowerPoint]. Recuperado 14 de abril de 2020, de: [](https://elvex.ugr.es/decsai/algorithms/slides/3%20DV.pdf).
-4. Campos, J. (s.f). *Esquemas Algorítmicos - Divide y Vencerás"*. Recuperado de: [](https://webdiis.unizar.es/asignaturas/EDA/ea/slides/3-Divide%20y%20venceras.pdf)
+3. Departamento de Ciencias de la Computación e I.A. (s.f). *Algoritmos "Divide y Vencerás"*. [Diapositiva de PowerPoint]. Recuperado 14 de abril de 2020, de: https://elvex.ugr.es/decsai/algorithms/slides/3%20DV.pdf
+4. Campos, J. (s.f). *Esquemas Algorítmicos - Divide y Vencerás"*. Recuperado de: https://webdiis.unizar.es/asignaturas/EDA/ea/slides/3-Divide%20y%20venceras.pdf
 
