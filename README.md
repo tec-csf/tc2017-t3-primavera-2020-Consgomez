@@ -47,7 +47,19 @@ En el código debemos de poner los números que deseamos multiplicar. Estos núm
 
 ### 2.1 Pasos a seguir para utilizar la aplicación
 
-*[Incluya aquí una guía paso a paso para poder utilizar la aplicación, desde la clonación del repositorio, la compilación del código hasta la ejecución de los ejemplos para visualizar los resultados.]*
+##### Subconjuntos
+
+* Si se desea, se puede modificar las variables *int conjunto[]* e *int cant* para encontrar el subconjunto para el número deseado
+* Usar la terminal para acceder a la carpeta [sources](https://github.com/tec-csf/tc2017-t3-primavera-2020-Consgomez/tree/master/sources).
+* Correr en la terminal el código con el comando: g++ Subconjunto.cpp -std=c++17 -o check
+* Correr el comando: ./check
+
+##### Multiplicación de enteros grandes
+
+* Si se desea, se puede modificar las variables *int a* e *int b* para multiplicar los número deseados
+* Usar la terminal para acceder a la carpeta [sources](https://github.com/tec-csf/tc2017-t3-primavera-2020-Consgomez/tree/master/sources).
+* Correr en la terminal el código con el comando: g++ MultiEnteros.cpp -std=c++17 -o segundo
+* Correr el comando: ./segundo
 
 ## 3. Referencias
 
